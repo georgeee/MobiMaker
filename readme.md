@@ -5,23 +5,24 @@ It's written for parsing wiki-summaries from neerc.ifmo.ru/wiki.
 
 
 Structure is such:
-    new_project.bash - creates the folder with name as argument 1 and copies blank settings.ini to new folder
-    directory_parser.php - parses directory index of articles, saves it to directory_saved.php in current folder
-    doc_downloader.php - downloads pages and images
-    opf_generator.php - generates .opf, .ncx and toc.html files
-    kindlegen/kindlegen - [Kindlegen](http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211) by Amazon
+  -  new_project.bash - creates the folder with name as argument 1 and copies blank settings.ini to new folder
+  -  directory_parser.php - parses directory index of articles, saves it to directory_saved.php in current folder
+  -  doc_downloader.php - downloads pages and images
+  -  opf_generator.php - generates .opf, .ncx and toc.html files
+  -  kindlegen/kindlegen - [Kindlegen](http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211) by Amazon
 
 
 Sequence to get your mobi:
+```bash
     ./new_project.bash prj_name
     cd prj_name
-    nano settings.ini //fill in the settings
+    nano settings.ini #fill in the settings
     php ../directory_parser.php
-    nano directory_saved.php //Edit it, if you need to alter the structure
+    nano directory_saved.php #Edit it, if you need to alter the structure
     php ../doc_downloader.php
     php ../opf_generator.php
     ../kindlegen/kindlegen book.opf
-
+```
 
 It will result in book.mobi in prj_name folder
 
