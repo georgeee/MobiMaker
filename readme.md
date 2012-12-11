@@ -14,14 +14,14 @@ Structure is such:
 
 Sequence to get your mobi:
 ```bash
-    ./new_project.bash prj_name
-    cd prj_name
-    nano settings.ini #fill in the settings
-    php ../directory_parser.php
-    nano directory_saved.php #Edit it, if you need to alter the structure
-    php ../doc_downloader.php
-    php ../opf_generator.php
-    ../kindlegen/kindlegen book.opf
+./new_project.bash prj_name
+cd prj_name
+nano settings.ini #fill in the settings
+php ../directory_parser.php
+nano directory_saved.php #Edit it, if you need to alter the structure
+php ../doc_downloader.php
+php ../opf_generator.php
+../kindlegen/kindlegen book.opf
 ```
 
 It will result in book.mobi in prj_name folder
